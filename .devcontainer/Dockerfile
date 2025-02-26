@@ -80,18 +80,18 @@ RUN ./configure && \
 # Install Cython and Kivy (full installation)
 # This section installs Kivy, a Python framework for developing multi-touch applications, along with Cython, 
 # which is required for compiling Kivy’s performance-critical components
-RUN pip install cython
-RUN pip install Kivy[full]==2.3.0
+# RUN pip install cython
+# RUN pip install Kivy[full]==2.3.0
 
 # Install additional libraries for app development
-RUN pip install pyserial
+# RUN pip install pyserial
 
 # Installs two important system utilities:
 # software-properties-common: Provides tools like add-apt-repository to manage PPAs (Personal Package Archives).
 #                             required for adding third-party repositories (e.g., KiCad PPA or Python PPAs).
 # apt-utils: Improves the apt package manager by enabling better interactive handling.
-RUN apt-get update && \
-    apt-get install -y software-properties-common apt-utils
+# RUN apt-get update && \
+#    apt-get install -y software-properties-common apt-utils
 
 ################# C Embedded Software Environment #############################
 # Download STM32Cube CTL zip file and set license acceptance
@@ -102,13 +102,6 @@ RUN /usr/local/bin/megadl https://mega.nz/file/glQ02bBK#yJjuwL7TAwPIuw6Lk7ahzeNI
 # This environment variable prevents license agreement prompts.
 ENV LICENSE_ALREADY_ACCEPTED=1
 
-
-
-
------------------------ CONTINUAR --------------------------------
-
-
-
 # Unzip, install, and clean STM32Cube CTL files
 RUN unzip -o en.st-stm32cubeclt_1.16.0_21983_20240628_1741_amd64.deb_bundle.sh.zip && \
     chmod +x st-stm32cubeclt_1.16.0_21983_20240628_1741_amd64.deb_bundle.sh && \
@@ -118,35 +111,37 @@ RUN unzip -o en.st-stm32cubeclt_1.16.0_21983_20240628_1741_amd64.deb_bundle.sh.z
     rm -rf en.st-stm32cubeclt_1.16.0_21983_20240628_1741_amd64.deb_bundle.sh.zip
 
 # Install STM32CubeMX
-RUN /usr/local/bin/megadl https://mega.nz/file/6AUSCZCS#XX5y5OA-NYerxH0ThHey89RUEUDdyNNDl6KjllWHYqE && \
+RUN /usr/local/bin/megadl https://mega.nz/file/EwxBUCDL#XX5y5OA-NYerxH0ThHey89RUEUDdyNNDl6KjllWHYqE && \
     unzip -o en.stm32cubemx-lin-v6-12-1.zip -d /root && \
     printf "1\n1\n\n\n\nY\n\n" | /root/SetupSTM32CubeMX-6.12.1 -console && \
     rm -rf en.stm32cubemx-lin-v6-12-1.zip /root/Readme.html /root/SetupSTM32CubeMX-6.12.1 /root/jre
 
-
 ################# User Configuration #############################
-# Create a non-root user 'fbs' with password '1234', grant sudo access without password
-RUN useradd -m fbs && echo "fbs:1234" | chpasswd && adduser fbs sudo
+# Create a non-root user 'jordimmg' with password '1234', grant sudo access without password
+RUN useradd -m jordimmg && echo "jordimmg:1234" | chpasswd && adduser jordimmg sudo
 RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-# Add user 'fbs' to plugdev and dialout groups for USB access
-RUN sudo usermod -aG plugdev fbs && sudo usermod -aG dialout fbs
+# Add user 'jordimmg' to plugdev and dialout groups for USB access
+# plugdev: Allows the user to use USB devices without requiring sudo permissions.
+# dialout: Grants access to serial devices, which is crucial for debugging microcontrollers (e.g., STM32, Arduino).
+RUN sudo usermod -aG plugdev jordimmg && sudo usermod -aG dialout jordimmg
 
-# Switch to 'fbs' user
-USER fbs
+# Switch to 'jordimmg' user
+USER jordimmg
 
-# Preload STM32 MCU files to avoid repeated downloads to generate code with STM32CubeMX
-WORKDIR /home/fbs/
-RUN /usr/local/bin/megadl  https://mega.nz/file/SVElGY4C#QR2NXd1jwOedZNHIM6E2rJ-XiqGLjlQ2m0fLkAeCLmc && \
-    unzip -o STM32Cube.zip && \
-    rm -rf /home/fbs/STM32Cube.zip
+# Preload STM32CubeWBA family files to avoid repeated downloads
+# This package is used to generate code with STM32CubeMX
+WORKDIR /home/jordimmg/
+RUN /usr/local/bin/megadl  https://mega.nz/file/YxpRTJoC#9rc1qGODIoRegj2-K5E3KnfZYJxy2LpFcNhK0Moch8A && \
+    unzip -o en.stm32cubewba-v1-5-0.zip && \
+    rm -rf /home/jordimmg/en.stm32cubewba-v1-5-0.zip
 
 # Set default workdir
-WORKDIR /workspaces/STM32WLE5_RF_dongle
+WORKDIR /workspaces/embedded_course
 
 # Copy KiCad's default configuration to avoid reconfiguring the entire Kicad environment on every container build
-RUN mkdir -p /home/fbs/.config/kicad/8.0/
-COPY assets/KiCad/kicad_default_conf/ /home/fbs/.config/kicad/8.0/
+# RUN mkdir -p /home/jordimmg/.config/kicad/8.0/
+# COPY assets/KiCad/kicad_default_conf/ /home/jordimmg/.config/kicad/8.0/
 
 # Update .bashrc with necessary exports and aliases
 RUN echo 'export PATH=$PATH:~/.local/bin/' >> ~/.bashrc
