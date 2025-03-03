@@ -14,6 +14,7 @@
                 // Default shell set to bash
                 "terminal.integrated.defaultProfile.linux": "bash"
             },
+            "postStartCommand": "sh -c 'sudo chmod +x .devcontainer/docker_entrypoint.sh && ./.devcontainer/docker_entrypoint.sh'",
             "extensions": [
                 "ms-vscode.cmake-tools",
                 "ms-vscode.cpptools",
@@ -22,7 +23,12 @@
                 // "battlebas.kivy-vscode",
                 "GitHub.copilot",
                 "mhutchie.git-graph",
-                "spencerwmiles.vscode-task-buttons"
+                "donjayamanne.githistory",
+                "spencerwmiles.vscode-task-buttons",
+                "aaron-bond.better-comments",
+                "bierner.markdown-preview-github-styles",
+                "josetr.cmake-language-support-vscode",
+                "ms-vscode.live-server",
             ]
         }
     }
