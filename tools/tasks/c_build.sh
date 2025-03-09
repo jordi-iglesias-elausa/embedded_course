@@ -16,7 +16,7 @@ mkdir -p "$build_dir"
 cd "$build_dir"
 
 # Run CMake only if the cache file does not exist (avoids re-running CMake every time)
-if [ ! -f "$build_dir/CMakeCache.txt" ]; then
+# # if [ ! -f "$build_dir/CMakeCache.txt" ]; then
   cmake \
     -DCMAKE_BUILD_TYPE="$preset" \
     -DCMAKE_TOOLCHAIN_FILE=/workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/firmware/cmake/gcc-arm-none-eabi.cmake \
