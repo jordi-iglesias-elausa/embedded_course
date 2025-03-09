@@ -1,4 +1,3 @@
-// workspace configuration allows you to work with multiple project folders in a single instance of Visual Studio Code.
 {
 	"folders": [
 		{
@@ -9,18 +8,18 @@
 	],
 	"settings": {
 		/* If you're using VSCode Remote - Containers (Dev Containers):
-		   The root folder name inside VSCode will usually match the project folder name from your host machine.
-		   The workspace root inside the container is typically /workspaces/<project-folder>. */
+			 The root folder name inside VSCode will usually match the project folder name from your host machine.
+			 The workspace root inside the container is typically /workspaces/<project-folder>. */
 		"cmake.sourceDirectory": "/workspaces/embedded_course",
 		"workbench.tree.indent": 16,
 		"workbench.tree.expandMode": "doubleClick",
 		"editor.tabSize": 2,
 		"editor.formatOnSave": true,
 		/*  enabling automatic fetching, you ensure that your local view of the repository is always up-to-date with 
-		    the latest changes from the remote */
+			the latest changes from the remote */
 		"git.autofetch": true,
 		"git-graph.showStatusBarItem": false,
-		"cmake.options.statusBarVisibility": "hidden",
+		"cmake.options.statusBarVisibility": "visible",
 		"cmake.options.advanced": {
 			"configurePreset": {
 				"statusBarVisibility": "inherit",
@@ -41,9 +40,13 @@
 		},
 		"debug.showInStatusBar": "never",
 		"VsCodeTaskButtons.showCounter": false,
+		// This section defines custom task buttons for the VS Code workspace.
+		// The "VsCodeTaskButtons.tasks" array contains a list of task groups.
+		// Each task group has a "label" for display, a list of "tasks", and an optional "tooltip".
+		// The tasks within each group are defined by their "label" and the corresponding "task" command.
 		"VsCodeTaskButtons.tasks": [
 			{
-				"label": "🛠 C",
+				"label": "🛠 Project",
 				"tasks": [
 					{
 						"label": "🔨 Build",
@@ -60,12 +63,16 @@
 					{
 						"label": "🧹 Clean",
 						"task": "C_Clean"
+					},
+					{
+						"label": "🔨 Generate compile_commands.json",
+						"task": "C_gen_compile_commands"
 					}
 				],
-				"tooltip": "Firmware"
+				"tooltip": "Build, debug, flash and clean the project"
 			},
 			{
-				"label": "🧰 Toolbox",
+				"label": "💼 Toolbox",
 				"tasks": [
 					{
 						"label": "⚙️ STM32CubeMX",
@@ -75,60 +82,82 @@
 				"tooltip": "Software tools used in the project"
 			}
 		],
-		"tasks": {
-			"version": "2.0.0",
-			"options": {
-				"env": {
-					"SCRIPTS_PATH": "/workspaces/embedded_course/tools/tasks"
-				},
+	},
+	// This section defines the tasks configuration for the embedded course workspace in Visual Studio Code.
+	// It specifies the version of the tasks configuration schema and sets environment variables for the tasks.
+	"tasks": {
+		"version": "2.0.0",
+		"options": {
+			"env": {
+				"SCRIPTS_PATH": "/workspaces/embedded_course/tools/tasks"
 			},
-			"tasks": [
-				{
-					"label": "C_Build",
-					"type": "shell",
-					"command": "${SCRIPTS_PATH}/c_build.sh",
-					"args": [
-						// dynamically retrieves the name of the active CMake configure preset.
-						"${command:cmake.activeConfigurePresetName}"
-					]
-				},
-				{
-					"label": "C_Debug",
-					"type": "shell",
-					"command": "${command:workbench.action.debug.selectandstart}"
-				},
-				{
-					"label": "C_Flash",
-					"type": "shell",
-					"command": "${SCRIPTS_PATH}/c_flash.sh",
-					"args": [
-						"${command:cmake.activeConfigurePresetName}"
-					]
-				},
-				{
-					"label": "C_Clean",
-					"type": "shell",
-					"command": "${SCRIPTS_PATH}/c_clean.sh"
-				},
-				{
-					"label": "STM32CubeMX",
-					"type": "shell",
-					"command": "${SCRIPTS_PATH}/run_stm32cubemx.sh"
-				}
-			]
 		},
-		"launch": {
-			"version": "0.2.0",
-			"configurations": [
-				{
-					"name": "STM32WLE5C8U6 firmware debug",
-					"cwd": "${workspaceFolder}",
-					"type": "cortex-debug",
-					"executable": "/workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/firmware/build/${command:cmake.activeConfigurePresetName}/STM32WLE5_RF_dongle.elf",
-					"request": "launch",
-					"preLaunchTask": "C_Build",
-					"servertype": "stlink",
-					/* run_ST_debugger.sh is a workaround to launch the ST-LINK_gdbserver with sudo to grant 
+		"tasks": [
+			{
+				"label": "C_Build",
+				"type": "shell",
+				"command": "${SCRIPTS_PATH}/c_build.sh",
+				"args": [
+					// dynamically retrieves the name of the active CMake configure preset.
+					"${command:cmake.activeConfigurePresetName}"
+				]
+			},
+			{
+				"label": "C_Debug",
+				"type": "shell",
+				"command": "${command:workbench.action.debug.selectandstart}"
+			},
+			{
+				"label": "C_Flash",
+				"type": "shell",
+				"command": "${SCRIPTS_PATH}/c_flash.sh",
+				"args": [
+					"${command:cmake.activeConfigurePresetName}"
+				]
+			},
+			{
+				"label": "C_Clean",
+				"type": "shell",
+				"command": "${SCRIPTS_PATH}/c_clean.sh"
+			},
+			{
+				"label": "C_gen_compile_commands",
+				"type": "shell",
+				"command": "${SCRIPTS_PATH}/c_gen_compile_commands.sh",
+				"args": [
+					"${workspaceFolder}"
+				],
+				"problemMatcher": [],
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			},
+			{
+				"label": "STM32CubeMX",
+				"type": "shell",
+				"command": "${SCRIPTS_PATH}/run_stm32cubemx.sh"
+			},
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		// This array contains individual debug configurations.
+		"configurations": [
+			{
+				"name": "Nucleo_wba52cg firmware debug",
+				// This sets the current working directory to the root of the workspace
+				"cwd": "${workspaceFolder}",
+				// This specifies that the Cortex-Debug extension will be used for debugging
+				"type": "cortex-debug",
+				/* This defines the path to the firmware executable file that will be debugged. The path includes 
+				   a variable ${command:cmake.activeConfigurePresetName} to dynamically include the active CMake configuration preset. */
+				"executable": "/workspaces/embedded_course/software/nucleo_wba52cg_example/build/${command:cmake.activeConfigurePresetName}/nucleo_wba52cg_example.elf",
+				"request": "launch",
+				// This specifies a task named "C_Build" that should be executed before starting the debugging session. This is typically used to build the firmware.
+				"preLaunchTask": "C_Build",
+				"servertype": "stlink",
+				/* run_ST_debugger.sh is a workaround to launch the ST-LINK_gdbserver with sudo to grant 
 							 * r/w permissions to the STLink USB devices from within the container without needing 
 							 * to add udev rules on the host. Another option is to set the "stlinkPath" file to
 							 * "/opt/st/stm32cubeclt_1.16.0/STLink-gdb-server/bin/ST-LINK_gdbserver" and add the
@@ -139,26 +168,19 @@
 							 *     sudo udevadm control --reload-rules
 							 *     sudo udevadm trigger
 							 */
-					"stlinkPath": "/workspaces/STM32WLE5_RF_dongle/.vscode/tasks/run_ST_debugger.sh",
-					"stm32cubeprogrammer": "/opt/st/stm32cubeclt_1.16.0/STM32CubeProgrammer/bin/",
-					"device": "STM32WLE5C8U6",
-					"interface": "swd",
-					"serialNumber": "", // Set ST_Link ID if you use multiple at the same time
-					"runToEntryPoint": "main",
-					"svdFile": "/opt/st/stm32cubeclt_1.16.0/STMicroelectronics_CMSIS_SVD/STM32WLE5_CM4.svd",
-					"serverArgs": [
-						"-m",
-						"0"
-					] //Do not reset the MCU when connecting the debugger
-				},
-				{
-					"name": "Kivy app debug",
-					"type": "debugpy",
-					"request": "launch",
-					"program": "/workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/kivy_app/main.py",
-					"console": "integratedTerminal"
-				}
-			]
-		}
+				"stlinkPath": "/workspaces/STM32WLE5_RF_dongle/.vscode/tasks/run_ST_debugger.sh",
+				"stm32cubeprogrammer": "/opt/st/stm32cubeclt_1.16.0/STM32CubeProgrammer/bin/",
+				"device": "STM32WBA52CGUx",
+				"interface": "swd",
+				"serialNumber": "", // Set ST_Link ID if you use multiple at the same time
+				"runToEntryPoint": "main",
+				"svdFile": "/opt/st/stm32cubeclt_1.16.0/STMicroelectronics_CMSIS_SVD/STM32WBAxx.svd",
+				"serverArgs": [
+					// argument "-m", "0" prevents the microcontroller from being reset when connecting the debugger.
+					"-m",
+					"0"
+				] //Do not reset the MCU when connecting the debugger
+			}
+		]
 	}
 }
