@@ -10,55 +10,55 @@ ENV DEBIAN_FRONTEND=noninteractive
 # build-essential → A meta-package that includes: gcc, g++, make and another essential tools for compiling software.
 #  apt-get clean → Cleans the local repository of retrieved package files that are no longer needed
 # rm -rf /var/lib/apt/lists/* → Removes the package lists to reduce the image size
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    python3-setuptools \
-    python3-dev \
-    build-essential \
-    git \
-    ffmpeg \
-    unzip \
-    xvfb \
-    libsdl2-ttf-2.0-0 \
-    libmtdev-dev \
-    xclip \
-    libgl1-mesa-glx \
-    libgles2-mesa \
-    libgl1-mesa-dri \
-    mesa-utils \
-    usbutils \
-    libsdl2-dev \
-    libsdl2-image-dev \
-    libsdl2-mixer-dev \
-    libsdl2-ttf-dev \
-    libportmidi-dev \
-    libswscale-dev \
-    libavformat-dev \
-    libavcodec-dev \
-    zlib1g-dev \
-    libgstreamer1.0-dev \
-    gstreamer1.0-plugins-base \
-    gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \
-    gstreamer1.0-plugins-ugly \
-    gstreamer1.0-libav \
-    gstreamer1.0-tools \
-    gstreamer1.0-x \
-    gstreamer1.0-alsa \
-    build-essential \ 
-    cmake \
-    openjdk-21-jre \
-    libusb-1.0-0-dev \
-    wget \
-    libssl-dev \
-    libcurl4-openssl-dev \
-    asciidoc \
-    clang-tools-extra \
-    bear \
-    sudo \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
+RUN apt-get install -y python3 
+RUN apt-get install -y python3-pip
+RUN apt-get install -y python3-setuptools
+RUN apt-get install -y python3-dev
+RUN apt-get install -y build-essential 
+RUN apt-get install -y git 
+RUN apt-get install -y ffmpeg 
+RUN apt-get install -y unzip 
+RUN apt-get install -y xvfb 
+RUN apt-get install -y libsdl2-ttf-2.0-0 
+RUN apt-get install -y libmtdev-dev 
+RUN apt-get install -y xclip 
+RUN apt-get install -y libgl1-mesa-glx 
+RUN apt-get install -y libgles2-mesa 
+RUN apt-get install -y libgl1-mesa-dri 
+RUN apt-get install -y mesa-utils 
+RUN apt-get install -y usbutils 
+RUN apt-get install -y libsdl2-dev 
+RUN apt-get install -y libsdl2-image-dev 
+RUN apt-get install -y libsdl2-mixer-dev 
+RUN apt-get install -y libsdl2-ttf-dev 
+RUN apt-get install -y libportmidi-dev 
+RUN apt-get install -y libswscale-dev 
+RUN apt-get install -y libavformat-dev 
+RUN apt-get install -y libavcodec-dev 
+RUN apt-get install -y zlib1g-dev 
+RUN apt-get install -y libgstreamer1.0-dev 
+RUN apt-get install -y gstreamer1.0-plugins-base 
+RUN apt-get install -y gstreamer1.0-plugins-good 
+RUN apt-get install -y gstreamer1.0-plugins-bad 
+RUN apt-get install -y gstreamer1.0-plugins-ugly 
+RUN apt-get install -y gstreamer1.0-libav 
+RUN apt-get install -y gstreamer1.0-tools 
+RUN apt-get install -y gstreamer1.0-x 
+RUN apt-get install -y gstreamer1.0-alsa 
+RUN apt-get install -y build-essential  
+RUN apt-get install -y cmake 
+RUN apt-get install -y openjdk-21-jre 
+RUN apt-get install -y libusb-1.0-0-dev 
+RUN apt-get install -y wget 
+RUN apt-get install -y libssl-dev 
+RUN apt-get install -y libcurl4-openssl-dev 
+RUN apt-get install -y asciidoc 
+# RUN apt-get install -y clang-tools-extra 
+RUN apt-get install -y bear 
+RUN apt-get install -y sudo 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/*
 
 # Create an alias for python3 as python
 RUN ln -s /usr/bin/python3 /usr/bin/python

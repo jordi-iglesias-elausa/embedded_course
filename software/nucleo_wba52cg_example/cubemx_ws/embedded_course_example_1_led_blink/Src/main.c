@@ -45,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 COM_InitTypeDef BspCOMInit;
-static uint32_t delay = 1000;
+static uint32_t delay = 250;
 
 /* USER CODE BEGIN PV */
 

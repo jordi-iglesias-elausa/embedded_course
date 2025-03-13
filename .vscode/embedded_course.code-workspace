@@ -19,7 +19,7 @@
 			the latest changes from the remote */
 		"git.autofetch": true,
 		"git-graph.showStatusBarItem": false,
-		"cmake.options.statusBarVisibility": "visible",
+		"cmake.options.statusBarVisibility": "hidden",
 		"cmake.options.advanced": {
 			"configurePreset": {
 				"statusBarVisibility": "inherit",
@@ -27,7 +27,7 @@
 			},
 			"build": {
 				"statusBarVisibility": "inherit",
-				"inheritDefault": "icon"
+				"inheritDefault": "visible"
 			},
 			"launch": {
 				"statusBarVisibility": "inherit",
@@ -53,16 +53,16 @@
 						"task": "C_Build"
 					},
 					{
+						"label": "🧹 Clean",
+						"task": "C_Clean"
+					},
+					{
 						"label": "🐞 Debug",
 						"task": "C_Debug"
 					},
 					{
 						"label": "⚡ Flash",
 						"task": "C_Flash"
-					},
-					{
-						"label": "🧹 Clean",
-						"task": "C_Clean"
 					},
 					{
 						"label": "🔨 Generate compile_commands.json",
@@ -118,7 +118,11 @@
 			{
 				"label": "C_Clean",
 				"type": "shell",
-				"command": "${SCRIPTS_PATH}/c_clean.sh"
+				"command": "${SCRIPTS_PATH}/c_clean.sh",
+				"args": [
+					// dynamically retrieves the name of the active CMake configure preset.
+					"${command:cmake.activeConfigurePresetName}"
+				]
 			},
 			{
 				"label": "C_gen_compile_commands",
@@ -145,14 +149,14 @@
 		// This array contains individual debug configurations.
 		"configurations": [
 			{
-				"name": "Nucleo_wba52cg firmware debug",
+				"name": "Nucleo_wba52cg firmware debug with SWD",
 				// This sets the current working directory to the root of the workspace
 				"cwd": "${workspaceFolder}",
 				// This specifies that the Cortex-Debug extension will be used for debugging
 				"type": "cortex-debug",
 				/* This defines the path to the firmware executable file that will be debugged. The path includes 
 				   a variable ${command:cmake.activeConfigurePresetName} to dynamically include the active CMake configuration preset. */
-				"executable": "/workspaces/embedded_course/software/nucleo_wba52cg_example/build/${command:cmake.activeConfigurePresetName}/nucleo_wba52cg_example.elf",
+				"executable": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/${command:cmake.activeConfigurePresetName}/example_1_led_blink.elf",
 				"request": "launch",
 				// This specifies a task named "C_Build" that should be executed before starting the debugging session. This is typically used to build the firmware.
 				"preLaunchTask": "C_Build",
@@ -168,18 +172,39 @@
 							 *     sudo udevadm control --reload-rules
 							 *     sudo udevadm trigger
 							 */
-				"stlinkPath": "/workspaces/STM32WLE5_RF_dongle/.vscode/tasks/run_ST_debugger.sh",
+				"stlinkPath": "/workspaces/embedded_course/tools/tasks/run_ST_debugger.sh",
 				"stm32cubeprogrammer": "/opt/st/stm32cubeclt_1.16.0/STM32CubeProgrammer/bin/",
 				"device": "STM32WBA52CGUx",
 				"interface": "swd",
 				"serialNumber": "", // Set ST_Link ID if you use multiple at the same time
 				"runToEntryPoint": "main",
-				"svdFile": "/opt/st/stm32cubeclt_1.16.0/STMicroelectronics_CMSIS_SVD/STM32WBAxx.svd",
+				"svdFile": "/opt/st/stm32cubeclt_1.16.0/STMicroelectronics_CMSIS_SVD/STM32WBA52.svd",
 				"serverArgs": [
 					// argument "-m", "0" prevents the microcontroller from being reset when connecting the debugger.
 					"-m",
 					"0"
 				] //Do not reset the MCU when connecting the debugger
+			},
+			{
+				"name": "Nucleo_wba52cg firmware debug with Open OCD",
+				"cwd": "${workspaceFolder}",
+				"executable": "${command:cmake.getLaunchTargetPath}",
+				"request": "launch",
+				"type": "cortex-debug",
+				"servertype": "openocd",
+				"device": "STM32WBA52CGUx",
+				"configFiles": [
+					"interface/stlink.cfg",
+					"target/stm32wbax.cfg"
+				],
+				"showDevDebugOutput": "raw",
+				"svdFile": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/STM32WB55_CM4.svd",
+				"overrideLaunchCommands": [
+					"file ${command:cmake.getLaunchTargetPath}",
+					"target extended-remote localhost:50000",
+					"monitor reset halt",
+					"load"
+				],
 			}
 		]
 	}

@@ -9,21 +9,24 @@ else
 fi
 
 # Define the build directory based on the preset
-build_dir="/workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/firmware/build/$preset"
+build_dir="/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/$preset"
 
 # Create the build directory if it does not exist and switch to it
 mkdir -p "$build_dir"
 cd "$build_dir"
 
+# Print the preset value
+echo "Building with preset: $preset"
+
 # Run CMake only if the cache file does not exist (avoids re-running CMake every time)
 # # if [ ! -f "$build_dir/CMakeCache.txt" ]; then
   cmake \
     -DCMAKE_BUILD_TYPE="$preset" \
-    -DCMAKE_TOOLCHAIN_FILE=/workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/firmware/cmake/gcc-arm-none-eabi.cmake \
-    -S /workspaces/STM32WLE5_RF_dongle/software/stm32wle5_rf_dongle_example/firmware \
+    -DCMAKE_TOOLCHAIN_FILE=/workspaces/embedded_course/tools/cmake/toolchain/arm/gcc-arm-none-eabi.cmake \
+    -S /workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink \
     -B "$build_dir" \
     -G "Unix Makefiles"
-fi
+# fi
 
 # Build
-make
+make -j4
