@@ -1,6 +1,8 @@
 ##### Firmware Project - STM32CubeMX #####
 
 software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/*
+software/nucleo_wba52cg_example/cubeide_ws/*
+software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build_cubeide/*
 
 # Prerequisites and object files
 *.d
