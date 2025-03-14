@@ -118,6 +118,12 @@ RUN /usr/local/bin/megadl https://mega.nz/file/EwxBUCDL#XX5y5OA-NYerxH0ThHey89RU
     printf "1\n1\n\n\n\nY\n\n" | /root/SetupSTM32CubeMX-6.12.1 -console && \
     rm -rf en.stm32cubemx-lin-v6-12-1.zip /root/Readme.html /root/SetupSTM32CubeMX-6.12.1 /root/jre
 
+# Install STM32CubeIDE
+RUN /usr/local/bin/megadl https://mega.nz/file/wwYWnAzK#ljB_in86Hav7254Rb7swvfwaYjb8ya_z7UM5_tKAKR4
+RUN unzip -o en.st-stm32cubeide_1.18.0_24413_20250227_1633_amd64.deb_bundle.sh.zip -d /tmp
+RUN chmod +x /tmp/st-stm32cubeide_1.18.0_24413_20250227_1633_amd64.deb_bundle.sh
+RUN /tmp/st-stm32cubeide_1.18.0_24413_20250227_1633_amd64.deb_bundle.sh --target /tmp/debfiles/ --noexec && sudo LICENSE_ALREADY_ACCEPTED=1 apt-get -y --no-install-recommends install /tmp/debfiles/***.deb
+    
 ################# User Configuration #############################
 # Create a non-root user 'jordimmg' with password '1234', grant sudo access without password
 RUN useradd -m jordimmg && echo "jordimmg:1234" | chpasswd && adduser jordimmg sudo
