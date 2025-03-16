@@ -77,6 +77,10 @@
 					{
 						"label": "⚙️ STM32CubeMX",
 						"task": "STM32CubeMX"
+					},
+					{
+						"label": "🎮 STM32CubeIDE",
+						"task": "STM32CubeIDE"
 					}
 				],
 				"tooltip": "Software tools used in the project"
@@ -142,6 +146,11 @@
 				"type": "shell",
 				"command": "${SCRIPTS_PATH}/run_stm32cubemx.sh"
 			},
+			{
+				"label": "STM32CubeIDE",
+				"type": "shell",
+				"command": "bash -i -c STM32CubeIDE"
+			}
 		]
 	},
 	"launch": {

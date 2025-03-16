@@ -154,3 +154,4 @@ WORKDIR /workspaces/embedded_course
 # Update .bashrc with necessary exports and aliases
 RUN echo 'export PATH=$PATH:~/.local/bin/' >> ~/.bashrc
 RUN echo "alias STM32CubeMX='/usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'" >> ~/.bashrc
+RUN echo "alias STM32CubeIDE='/opt/st/stm32cubeide_1.18.0/stm32cubeide'" >> ~/.bashrc
