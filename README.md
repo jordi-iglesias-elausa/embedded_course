@@ -19,7 +19,53 @@ Useful links:
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Connecting USB devices to WSL](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
-  - In our project, we use the script `attach_usb_to_wsl.bat` from the Windows machine to attach the USB device corresponding to the ST-LINK device to the WSL (and from there to the Docker image running in the WSL).
+  - In our project, we use the script `attach_usb_to_wsl.bat` from the Windows machine to attach the USB device corresponding to the ST-LINK device to the WSL (this has to be done with the docker container not opened, only connect to the wsl but without opening the workspace in the container)
+
+  - Download the udev Rules File
+
+    Download the necessary udev rules file from the official repository:
+
+  ```bash
+  wget https://github.com/stlink-org/stlink/raw/develop/config/udev/rules.d/49-stlinkv2-1.rules
+  ```
+
+  - Move the udev Rules File to the Correct Directory
+
+    Move the downloaded rules file to the appropriate directory:
+
+  ```bash
+  sudo cp 49-stlinkv2-1.rules /etc/udev/rules.d/
+  ```
+
+  - Start the udev service:
+
+    If the udev service is inactive or not running, start it with:
+
+  ```bash
+  sudo service udev start
+  ```
+
+  - Reload and Apply udev Rules
+
+    After copying the file, reload the udev rules and trigger them to apply the changes:
+
+  ```bash
+  sudo udevadm control --reload-rules
+  sudo udevadm trigger
+  ```
+
+  - Verify the Installation
+
+    Unplug and reconnect your ST-LINK device, then check its permissions by running:
+
+    This will display the permissions of the ST-LINK device to ensure the rules are applied correctly.
+
+  ```bash
+  ls -l /dev/bus/usb/$(lsusb | grep -i 'st-link' | awk '{print $2 "/" $4}' | sed 's/://')
+  ```
+
+  - In STM32CubeIde, when configuring the debug, in the "Debugger" tab, we need to sepcify the "Acces port" as 1 - Cortex-M33
+
 ## Quick start
 
 Once inside the devcontainer you will find the following folders:
