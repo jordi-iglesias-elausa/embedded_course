@@ -3,18 +3,18 @@
     // enable line below to use a pre-built image
     // "image": "fbs093/stm32wle5_rf_dongle:v0.0",
     // enable line below to use a Dockerfile
-    "dockerFile": "Dockerfile", 
+    "dockerFile": "Dockerfile",
     "runArgs": [
         // Full access to host resources and devices.
-        "--privileged"
+        "--privileged",
     ],
+    "postStartCommand": "sh -c 'sudo chmod +x /workspaces/embedded_course/.devcontainer/post-start-command.sh && /workspaces/embedded_course/.devcontainer/post-start-command.sh'",
     "customizations": {
         "vscode": {
             "settings": {
                 // Default shell set to bash
-                "terminal.integrated.defaultProfile.linux": "bash"
+                // "terminal.integrated.defaultProfile.linux": "bash"
             },
-            "postStartCommand": "sh -c 'sudo chmod +x .devcontainer/docker_entrypoint.sh && ./.devcontainer/docker_entrypoint.sh'",
             "extensions": [
                 "ms-vscode.cmake-tools",
                 "ms-vscode.cpptools",
@@ -28,7 +28,7 @@
                 "aaron-bond.better-comments",
                 "bierner.markdown-preview-github-styles",
                 "josetr.cmake-language-support-vscode",
-                "ms-vscode.live-server",
+                "ms-vscode.live-server"
             ]
         }
     }
