@@ -10,32 +10,67 @@
 		/* If you're using VSCode Remote - Containers (Dev Containers):
 			 The root folder name inside VSCode will usually match the project folder name from your host machine.
 			 The workspace root inside the container is typically /workspaces/<project-folder>. */
-		"cmake.sourceDirectory": "/workspaces/embedded_course",
 		"workbench.tree.indent": 16,
 		"workbench.tree.expandMode": "doubleClick",
 		"editor.tabSize": 2,
 		"editor.formatOnSave": true,
-		/*  enabling automatic fetching, you ensure that your local view of the repository is always up-to-date with 
+		/* enabling automatic fetching, you ensure that your local view of the repository is always up-to-date with 
 			the latest changes from the remote */
 		"git.autofetch": true,
 		"git-graph.showStatusBarItem": false,
+		// Specifies the root directory for CMake, which contains the main CMakeLists.txt file.
+		"cmake.sourceDirectory": "/workspaces/embedded_course",
+		"cmake.debugConfig": {
+			"MIMode": "gdb",
+			"miDebuggerPath": "/usr/bin/gdb",
+			"stopAtEntry": true
+		},
 		"cmake.options.statusBarVisibility": "hidden",
 		"cmake.options.advanced": {
+			"variant": { //Debug, Release,...
+				"statusBarVisibility": "hidden",
+			},
+			"cpack": {
+				"statusBarVisibility": "hidden",
+			},
+			"workflow": {
+				"statusBarVisibility": "hidden",
+			},
 			"configurePreset": {
+				"statusBarVisibility": "inherit",
+				"inheritDefault": "visible"
+			},
+			"buildPreset": {
+				"statusBarVisibility": "inherit",
+				"inheritDefault": "hidden"
+			},
+			"folder": {
+				"statusBarVisibility": "inherit",
+				"inheritDefault": "hidden"
+			},
+			"kit": {
 				"statusBarVisibility": "inherit",
 				"inheritDefault": "visible"
 			},
 			"build": {
 				"statusBarVisibility": "inherit",
-				"inheritDefault": "visible"
+				"inheritDefault": "visible",
 			},
 			"launch": {
 				"statusBarVisibility": "inherit",
-				"inheritDefault": "icon"
+				"inheritDefault": "visible"
 			},
 			"debug": {
 				"statusBarVisibility": "inherit",
-				"inheritDefault": "icon"
+				"inheritDefault": "visible"
+			},
+			"launchTarget": {
+				"statusBarVisibility": "inherit",
+				"inheritDefault": "visible"
+			},
+			"buildTarget": {
+				"statusBarVisibility": "inherit",
+				"inheritDefault": "visible"
 			}
 		},
 		"debug.showInStatusBar": "never",

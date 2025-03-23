@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "config-base",
+      "description": "General configuration",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "toolchainFile": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "Virtual",
+      "inherits": "config-base",
+      "description": "💻 Config using virtual drivers",
+      "hidden": false,
+      "cacheVariables": {
+        "ENABLE_UNIT_TEST": "OFF",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion"
+      }
+    },
+    {
+      "name": "Test",
+      "inherits": "config-base",
+      "description": "🧪 Config for unit and integration test",
+      "hidden": false,
+      "cacheVariables": {
+        "ENABLE_UNIT_TEST": "ON",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion"
+      }
+    }
+  ]
+}

@@ -66,6 +66,32 @@ Useful links:
 
   - In STM32CubeIde, when configuring the debug, in the "Debugger" tab, we need to sepcify the "Acces port" as 1 - Cortex-M33
 
+## Build System Generator
+
+This project uses the following CMake generator by default:
+
+```json
+"generator": "Unix Makefiles"
+```
+
+This generates standard Makefiles that you can build with `make` on the command line. This choice ensures compatibility with a wide range of systems and build tools, especially in environments where `make` is already available or required.
+
+> **Note:** While `Unix Makefiles` is used here, it is generally recommended to use the **Ninja** generator for most CMake projects. Ninja offers faster builds, better parallelization, and more efficient incremental builds.  
+>  
+> To use Ninja instead, install it via your package manager:
+>
+> ```bash
+> sudo apt install ninja-build
+> ```
+>
+> Then update your preset or configuration:
+>
+> ```json
+> "generator": "Ninja"
+> ```
+
+Feel free to use Ninja if it's available in your environment.
+
 ## Quick start
 
 Once inside the devcontainer you will find the following folders:

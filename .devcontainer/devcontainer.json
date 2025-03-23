@@ -6,14 +6,14 @@
     "dockerFile": "Dockerfile",
     "runArgs": [
         // Full access to host resources and devices.
-        "--privileged",
+        "--privileged"
     ],
     "postStartCommand": "sh -c 'sudo chmod +x /workspaces/embedded_course/.devcontainer/post-start-command.sh && /workspaces/embedded_course/.devcontainer/post-start-command.sh'",
     "customizations": {
         "vscode": {
             "settings": {
                 // Default shell set to bash
-                // "terminal.integrated.defaultProfile.linux": "bash"
+                "terminal.integrated.defaultProfile.linux": "bash"
             },
             "extensions": [
                 "ms-vscode.cmake-tools",
@@ -28,7 +28,8 @@
                 "aaron-bond.better-comments",
                 "bierner.markdown-preview-github-styles",
                 "josetr.cmake-language-support-vscode",
-                "ms-vscode.live-server"
+                "ms-vscode.live-server",
+                "ibm.output-colorizer"
             ]
         }
     }

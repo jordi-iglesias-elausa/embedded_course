@@ -57,6 +57,7 @@ RUN apt-get install -y asciidoc
 # RUN apt-get install -y clang-tools-extra 
 RUN apt-get install -y bear 
 RUN apt-get install -y sudo 
+RUN apt-get install -y gdb
 RUN apt-get clean 
 RUN rm -rf /var/lib/apt/lists/*
 
