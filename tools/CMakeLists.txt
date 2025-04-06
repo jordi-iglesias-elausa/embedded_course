@@ -1,0 +1,5 @@
+if(ENABLE_HOST_UNIT_TESTS)
+  message(STATUS "Unity: Building with the fixture extension.")
+  add_library(unity unity/src/unity.c)
+  target_include_directories(unity PUBLIC unity/src/)
+endif()

@@ -13,8 +13,8 @@
  ********************************************************************************/
 
 /**
- * @file file_name.c
- * @author author_name
+ * @file test_lib_test_a.c
+ * @author jordi iglesias
  * @date xx/xx/xxxx
  * @brief Brief description of the file
  *
@@ -24,7 +24,7 @@
 // ****** HEADERS ******
 
 // C system headers (e.g., <unistd.h>, <stdlib.h>).
-#include <stdio.h>
+#include <unity.h>
 
 // C/C++ standard library headers (e.g., <algorithm>, <cstddef>).
 
@@ -47,57 +47,26 @@
 
 // ****** STATIC FUNCTIONS DEFINITION ******
 
+// Test Setup function (optional)
+void setUp(void) {
+  // This runs before each test, can be left empty if no setup is needed
+}
+
+// Test Tear Down function (optional)
+void tearDown(void) {
+  // This runs after each test, can be left empty if no cleanup is needed
+}
+
 // ****** GLOBAL FUNCTIONS DEFINITION ******
 
-void _exit(int status) {
-  (void)status; // Avoid unused variable warning
-  while (1) {
-    // Infinite loop to simulate a system halt
-  }
+void test_libTestA_check_add(void) {
+  uint16_t expected = 10;
+
+  TEST_ASSERT_EQUAL(expected, add(4, 6));
 }
 
-int _write() {
-  return 0;
-}
+void test_libTestA_check_add_withFailure(void) {
+  uint16_t expected = 11;
 
-int _read() {
-  return 0;
-}
-
-int _close() {
-  return 0;
-}
-
-int _fstat() {
-  return 0;
-}
-
-int _lseek() {
-  return 0;
-}
-
-int _isatty() {
-  return 0;
-}
-
-void* _sbrk() {
-  return (void*)-1;
-}
-
-int main() {
-  int a = 100;
-  int b = 10;
-
-  int sum = add(a, b);
-  int difference = subtract(a, b);
-  int product = multiply(a, b);
-  float quotient = divide(a, b);
-
-  printf("Execution of the program appTestB\n");
-  printf("Sum: %d\n", sum);
-  printf("Difference: %d\n", difference);
-  printf("Product: %d\n", product);
-  printf("Quotient: %.2f\n", quotient);
-
-  return 0;
+  TEST_ASSERT_EQUAL(expected, add(1, 9));
 }

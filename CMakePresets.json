@@ -6,31 +6,94 @@
       "description": "General configuration",
       "hidden": true,
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build",
-      "toolchainFile": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
       }
     },
     {
-      "name": "Virtual",
+      "name": "HOST_EXAMPLES_DEBUG",
       "inherits": "config-base",
-      "description": "💻 Config using virtual drivers",
-      "hidden": false,
+      "description": "💻 Host Examples (Debug)",
+      "binaryDir": "${sourceDir}/build/HOST_EXAMPLES_DEBUG",
       "cacheVariables": {
-        "ENABLE_UNIT_TEST": "OFF",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "SELECTED_CMAKE_PRESET": "HOST_EXAMPLES_DEBUG",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "ON",
+        "ENABLE_HOST_UNIT_TESTS": "OFF",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
       }
     },
     {
-      "name": "Test",
+      "name": "HOST_EXAMPLES_RELEASE",
       "inherits": "config-base",
-      "description": "🧪 Config for unit and integration test",
-      "hidden": false,
+      "description": "💻 Host Examples (Release)",
+      "binaryDir": "${sourceDir}/build/HOST_EXAMPLES_RELEASE",
       "cacheVariables": {
-        "ENABLE_UNIT_TEST": "ON",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion"
+        "CMAKE_BUILD_TYPE": "Release",
+        "SELECTED_CMAKE_PRESET": "HOST_EXAMPLES_RELEASE",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "ON",
+        "ENABLE_HOST_UNIT_TESTS": "OFF",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+      }
+    },
+    {
+      "name": "HOST_UNIT_TESTS_DEBUG",
+      "inherits": "config-base",
+      "description": "💻 Host Unit Tests (Debug)",
+      "binaryDir": "${sourceDir}/build/HOST_UNIT_TESTS_DEBUG",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "SELECTED_CMAKE_PRESET": "HOST_UNIT_TESTS_DEBUG",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "OFF",
+        "ENABLE_HOST_UNIT_TESTS": "ON",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+      }
+    },
+    {
+      "name": "HOST_UNIT_TESTS_RELEASE",
+      "inherits": "config-base",
+      "description": "💻 Host Unit Tests (Release)",
+      "binaryDir": "${sourceDir}/build/HOST_UNIT_TESTS_RELEASE",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "SELECTED_CMAKE_PRESET": "HOST_UNIT_TESTS_RELEASE",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "OFF",
+        "ENABLE_HOST_UNIT_TESTS": "ON",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+      }
+    },
+    {
+      "name": "NUCLEO_WBA52CG_EXAMPLES_DEBUG",
+      "inherits": "config-base",
+      "description": "🔧 Nucleo WBA52CG (Debug)",
+      "binaryDir": "${sourceDir}/build/NUCLEO_WBA52CG_EXAMPLES_DEBUG",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "SELECTED_CMAKE_PRESET": "NUCLEO_WBA52CG_EXAMPLES_DEBUG",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "OFF",
+        "ENABLE_HOST_UNIT_TESTS": "OFF",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "ON",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/arm/gcc-arm-none-eabi.cmake"
+      }
+    },
+    {
+      "name": "NUCLEO_WBA52CG_EXAMPLES_RELEASE",
+      "inherits": "config-base",
+      "description": "🔧 Nucleo WBA52CG (Release)",
+      "binaryDir": "${sourceDir}/build/NUCLEO_WBA52CG_EXAMPLES_RELEASE",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "SELECTED_CMAKE_PRESET": "NUCLEO_WBA52CG_EXAMPLES_RELEASE",
+        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
+        "ENABLE_HOST_EXAMPLES": "OFF",
+        "ENABLE_HOST_UNIT_TESTS": "OFF",
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "ON",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/arm/gcc-arm-none-eabi.cmake"
       }
     }
   ]

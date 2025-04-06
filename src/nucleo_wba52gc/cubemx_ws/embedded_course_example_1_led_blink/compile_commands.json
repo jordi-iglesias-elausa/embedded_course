@@ -27,9 +27,9 @@
       "build/main.o",
       "Src/main.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/main.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/main.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/main.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/main.o"
   },
   {
     "arguments": [
@@ -59,9 +59,9 @@
       "build/gpio.o",
       "Src/gpio.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/gpio.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/gpio.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/gpio.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/gpio.o"
   },
   {
     "arguments": [
@@ -91,9 +91,9 @@
       "build/icache.o",
       "Src/icache.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/icache.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/icache.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/icache.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/icache.o"
   },
   {
     "arguments": [
@@ -123,9 +123,9 @@
       "build/memorymap.o",
       "Src/memorymap.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/memorymap.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/memorymap.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/memorymap.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/memorymap.o"
   },
   {
     "arguments": [
@@ -155,9 +155,9 @@
       "build/stm32wbaxx_it.o",
       "Src/stm32wbaxx_it.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/stm32wbaxx_it.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_it.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/stm32wbaxx_it.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_it.o"
   },
   {
     "arguments": [
@@ -187,9 +187,9 @@
       "build/stm32wbaxx_hal_msp.o",
       "Src/stm32wbaxx_hal_msp.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/stm32wbaxx_hal_msp.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_msp.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/stm32wbaxx_hal_msp.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_msp.o"
   },
   {
     "arguments": [
@@ -219,9 +219,9 @@
       "build/stm32wbaxx_nucleo.o",
       "Drivers/BSP/STM32WBAxx_Nucleo/stm32wbaxx_nucleo.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/BSP/STM32WBAxx_Nucleo/stm32wbaxx_nucleo.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_nucleo.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/BSP/STM32WBAxx_Nucleo/stm32wbaxx_nucleo.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_nucleo.o"
   },
   {
     "arguments": [
@@ -251,9 +251,9 @@
       "build/stm32wbaxx_hal_cortex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_cortex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_cortex.o"
   },
   {
     "arguments": [
@@ -283,9 +283,9 @@
       "build/stm32wbaxx_hal_icache.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_icache.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_icache.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_icache.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_icache.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_icache.o"
   },
   {
     "arguments": [
@@ -315,9 +315,9 @@
       "build/stm32wbaxx_hal.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal.o"
   },
   {
     "arguments": [
@@ -347,9 +347,9 @@
       "build/stm32wbaxx_hal_rcc.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_rcc.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_rcc.o"
   },
   {
     "arguments": [
@@ -379,9 +379,9 @@
       "build/stm32wbaxx_hal_rcc_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_rcc_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rcc_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_rcc_ex.o"
   },
   {
     "arguments": [
@@ -411,9 +411,9 @@
       "build/stm32wbaxx_hal_flash.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_flash.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_flash.o"
   },
   {
     "arguments": [
@@ -443,9 +443,9 @@
       "build/stm32wbaxx_hal_flash_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_flash_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_flash_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_flash_ex.o"
   },
   {
     "arguments": [
@@ -475,9 +475,9 @@
       "build/stm32wbaxx_hal_gpio.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_gpio.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_gpio.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_gpio.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_gpio.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_gpio.o"
   },
   {
     "arguments": [
@@ -507,9 +507,9 @@
       "build/stm32wbaxx_hal_dma.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_dma.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_dma.o"
   },
   {
     "arguments": [
@@ -539,9 +539,9 @@
       "build/stm32wbaxx_hal_dma_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_dma_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_dma_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_dma_ex.o"
   },
   {
     "arguments": [
@@ -571,9 +571,9 @@
       "build/stm32wbaxx_hal_exti.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_exti.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_exti.o"
   },
   {
     "arguments": [
@@ -603,9 +603,9 @@
       "build/stm32wbaxx_hal_pwr.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_pwr.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_pwr.o"
   },
   {
     "arguments": [
@@ -635,9 +635,9 @@
       "build/stm32wbaxx_hal_pwr_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_pwr_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_pwr_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_pwr_ex.o"
   },
   {
     "arguments": [
@@ -667,9 +667,9 @@
       "build/stm32wbaxx_hal_tim.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_tim.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_tim.o"
   },
   {
     "arguments": [
@@ -699,9 +699,9 @@
       "build/stm32wbaxx_hal_tim_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_tim_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_tim_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_tim_ex.o"
   },
   {
     "arguments": [
@@ -731,9 +731,9 @@
       "build/stm32wbaxx_hal_usart.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_usart.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_usart.o"
   },
   {
     "arguments": [
@@ -763,9 +763,9 @@
       "build/stm32wbaxx_hal_usart_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_usart_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_usart_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_usart_ex.o"
   },
   {
     "arguments": [
@@ -795,9 +795,9 @@
       "build/stm32wbaxx_hal_uart_ex.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart_ex.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart_ex.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_uart_ex.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart_ex.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_uart_ex.o"
   },
   {
     "arguments": [
@@ -827,9 +827,9 @@
       "build/stm32wbaxx_hal_uart.o",
       "Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_uart.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_uart.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/stm32wbaxx_hal_uart.o"
   },
   {
     "arguments": [
@@ -859,9 +859,9 @@
       "build/system_stm32wbaxx.o",
       "Src/system_stm32wbaxx.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/system_stm32wbaxx.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/system_stm32wbaxx.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/system_stm32wbaxx.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/system_stm32wbaxx.o"
   },
   {
     "arguments": [
@@ -891,9 +891,9 @@
       "build/sysmem.o",
       "Src/sysmem.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/sysmem.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/sysmem.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/sysmem.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/sysmem.o"
   },
   {
     "arguments": [
@@ -923,9 +923,9 @@
       "build/syscalls.o",
       "Src/syscalls.c"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/Src/syscalls.c",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/syscalls.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/Src/syscalls.c",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/syscalls.o"
   },
   {
     "arguments": [
@@ -956,8 +956,8 @@
       "build/startup_stm32wba52xx.o",
       "startup_stm32wba52xx.s"
     ],
-    "directory": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink",
-    "file": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/startup_stm32wba52xx.s",
-    "output": "/workspaces/embedded_course/software/nucleo_wba52cg_example/cubemx_ws/embedded_course_example_1_led_blink/build/startup_stm32wba52xx.o"
+    "directory": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink",
+    "file": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/startup_stm32wba52xx.s",
+    "output": "/workspaces/embedded_course/src/nucleo_wba52gc/cubemx_ws/embedded_course_example_1_led_blink/build/startup_stm32wba52xx.o"
   }
 ]

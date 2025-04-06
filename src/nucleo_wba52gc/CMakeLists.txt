@@ -1,0 +1,1 @@
+add_subdirectory(cubemx_ws)

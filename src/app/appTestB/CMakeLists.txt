@@ -1,6 +1,8 @@
 # Root CMakeLists.txt file for the project.
-cmake_minimum_required(VERSION 3.15.3)
 
-add_executable(appTestB src/main.c)
+message("###### Processing CMakeLists.txt in folder: ${CMAKE_CURRENT_SOURCE_DIR} ######")
 
-target_link_libraries(appTestB PRIVATE libTestA)
+if(ENABLE_HOST_EXAMPLES_DEBUG OR ENABLE_HOST_EXAMPLES_RELEASE)
+  add_executable(appTestB src/main.c)
+  target_link_libraries(appTestB PRIVATE libTestA)
+endif()

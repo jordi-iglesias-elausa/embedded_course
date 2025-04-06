@@ -30,6 +30,8 @@ set(TARGET_FLAGS "-mcpu=cortex-m4 ")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${TARGET_FLAGS}")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections")
 
+message(STATUS "------------ CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+
 if(CMAKE_BUILD_TYPE MATCHES Debug)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g3")
 endif()
@@ -50,3 +52,7 @@ set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--start-group -lc -lm -Wl,--en
 set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--print-memory-usage")
 
 set(CMAKE_CXX_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--start-group -lstdc++ -lsupc++ -Wl,--end-group")
+
+message(STATUS "------------ CMAKE_C_FLAGS: ${CMAKE_C_FLAGS}")
+message(STATUS "------------ CMAKE_ASM_FLAGS: ${CMAKE_ASM_FLAGS}")
+message(STATUS "------------ CMAKE_C_LINK_FLAGS: ${CMAKE_C_LINK_FLAGS}")

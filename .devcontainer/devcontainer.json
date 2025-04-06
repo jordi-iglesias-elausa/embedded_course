@@ -29,7 +29,7 @@
                 "bierner.markdown-preview-github-styles",
                 "josetr.cmake-language-support-vscode",
                 "ms-vscode.live-server",
-                "ibm.output-colorizer"
+                "emilast.logfilehighlighter"
             ]
         }
     }

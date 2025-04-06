@@ -18,6 +18,15 @@
 			the latest changes from the remote */
 		"git.autofetch": true,
 		"git-graph.showStatusBarItem": false,
+		"logFileHighlighter.customPatterns": [
+			// Highlight the text 'FAIl' with green color
+			{
+				"pattern": "FAIL:",
+				"highlightEntireLine": true,
+				"background": "#ff0000",
+				"foreground": "#FFFFFF"
+			}
+		],
 		// Specifies the root directory for CMake, which contains the main CMakeLists.txt file.
 		"cmake.sourceDirectory": "/workspaces/embedded_course",
 		"cmake.debugConfig": {
@@ -84,12 +93,12 @@
 				"label": "🛠 Project",
 				"tasks": [
 					{
-						"label": "🔨 Build",
-						"task": "C_Build"
-					},
-					{
 						"label": "🧹 Clean",
 						"task": "C_Clean"
+					},
+					{
+						"label": "🔨 Build",
+						"task": "C_Build"
 					},
 					{
 						"label": "🐞 Debug",
@@ -98,6 +107,10 @@
 					{
 						"label": "⚡ Flash",
 						"task": "C_Flash"
+					},
+					{
+						"label": "🧪 Unit test",
+						"task": "c_unit_test"
 					},
 					{
 						"label": "🔨 Generate compile_commands.json",
@@ -138,7 +151,8 @@
 				"command": "${SCRIPTS_PATH}/c_build.sh",
 				"args": [
 					// dynamically retrieves the name of the active CMake configure preset.
-					"${command:cmake.activeConfigurePresetName}"
+					"${command:cmake.activeConfigurePresetName}",
+					"${command:cmake.buildTargetName}"
 				]
 			},
 			{

@@ -47,6 +47,41 @@
 
 // ****** STATIC FUNCTIONS DEFINITION ******
 
+void _exit(int status) {
+  (void)status; // Avoid unused variable warning
+  while (1) {
+    // Infinite loop to simulate a system halt
+  }
+}
+
+int _write() {
+  return 0;
+}
+
+int _read() {
+  return 0;
+}
+
+int _close() {
+  return 0;
+}
+
+int _fstat() {
+  return 0;
+}
+
+int _lseek() {
+  return 0;
+}
+
+int _isatty() {
+  return 0;
+}
+
+void* _sbrk() {
+  return (void*)-1;
+}
+
 // ****** GLOBAL FUNCTIONS DEFINITION ******
 
 int main() {

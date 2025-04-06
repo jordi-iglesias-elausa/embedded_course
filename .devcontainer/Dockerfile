@@ -146,7 +146,11 @@ RUN /usr/local/bin/megadl  https://mega.nz/file/YxpRTJoC#9rc1qGODIoRegj2-K5E3Knf
     rm -rf /home/jordimmg/en.stm32cubewba-v1-5-0.zip
 
 # Set default workdir
-WORKDIR /workspaces/embedded_course
+ENV WORKSPACE_DIR=/workspaces/embedded_course
+WORKDIR ${WORKSPACE_DIR}
+
+# Add directories on PATH variable
+ENV PATH="$PATH:$WORKSPACE_DIR/tools/tasks"
 
 # Copy KiCad's default configuration to avoid reconfiguring the entire Kicad environment on every container build
 # RUN mkdir -p /home/jordimmg/.config/kicad/8.0/
