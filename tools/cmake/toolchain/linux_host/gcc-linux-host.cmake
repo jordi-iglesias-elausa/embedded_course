@@ -27,14 +27,16 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 set(TARGET_FLAGS "")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${TARGET_FLAGS}")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections")
+set(COMMON_C_FLAGS "-fdata-sections -ffunction-sections")
+
+message(STATUS "------------ CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g3")
+  set(CMAKE_C_FLAGS_DEBUG "${COMMON_C_FLAGS} -Wall -Wextra -Wconversion -O0 -g3" CACHE STRING "Debug build flags" FORCE)
 endif()
 
 if(CMAKE_BUILD_TYPE MATCHES Release)
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os -g3")
+  set(CMAKE_C_FLAGS_RELEASE "${COMMON_C_FLAGS} -Wall -Wextra -Wconversion -Os -g3" CACHE STRING "Release build flags" FORCE)
 endif()
 
 set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -x assembler-with-cpp -MMD -MP")

@@ -81,26 +81,20 @@ target_include_directories(${EXECUTABLE} PRIVATE
         Drivers/STM32WBAxx_HAL_Driver/Inc
         Drivers/CMSIS/Device/ST/STM32WBAxx/Include
         Drivers/CMSIS/Include
+        Drivers/BSP/STM32WBAxx_Nucleo
 )
 
 # $<$<CONFIG:Debug>:-Og> ==> generator expression that applies the -Og optimization level only when the build configuration is set to Debug
 target_compile_options(${EXECUTABLE} PRIVATE
-        -mcpu=cortex-m4
+        -mcpu=cortex-m33
         -mthumb
         -mfpu=fpv4-sp-d16
         -mfloat-abi=hard
-
-        -fdata-sections
-        -ffunction-sections
-
-        -Wall
-
-        $<$<CONFIG:Debug>:-Og>
 )
 
 target_link_options(${EXECUTABLE} PRIVATE
         -T${CMAKE_CURRENT_SOURCE_DIR}/STM32WBA52xx_FLASH.ld
-        -mcpu=cortex-m4
+        -mcpu=cortex-m33
         -mthumb
         -mfpu=fpv4-sp-d16
         -mfloat-abi=hard

@@ -18,10 +18,10 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "SELECTED_CMAKE_PRESET": "HOST_EXAMPLES_DEBUG",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "ON",
         "ENABLE_HOST_UNIT_TESTS": "OFF",
-        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake"
       }
     },
     {
@@ -32,10 +32,10 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "SELECTED_CMAKE_PRESET": "HOST_EXAMPLES_RELEASE",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "ON",
         "ENABLE_HOST_UNIT_TESTS": "OFF",
-        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake"
       }
     },
     {
@@ -46,10 +46,10 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "SELECTED_CMAKE_PRESET": "HOST_UNIT_TESTS_DEBUG",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "OFF",
         "ENABLE_HOST_UNIT_TESTS": "ON",
-        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake"
       }
     },
     {
@@ -60,10 +60,10 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "SELECTED_CMAKE_PRESET": "HOST_UNIT_TESTS_RELEASE",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "OFF",
         "ENABLE_HOST_UNIT_TESTS": "ON",
-        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF"
+        "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "OFF",
+        "CMAKE_TOOLCHAIN_FILE": "/workspaces/embedded_course/tools/cmake/toolchain/linux_host/gcc-linux-host.cmake"
       }
     },
     {
@@ -74,7 +74,6 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "SELECTED_CMAKE_PRESET": "NUCLEO_WBA52CG_EXAMPLES_DEBUG",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "OFF",
         "ENABLE_HOST_UNIT_TESTS": "OFF",
         "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "ON",
@@ -89,7 +88,6 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "SELECTED_CMAKE_PRESET": "NUCLEO_WBA52CG_EXAMPLES_RELEASE",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -Wconversion",
         "ENABLE_HOST_EXAMPLES": "OFF",
         "ENABLE_HOST_UNIT_TESTS": "OFF",
         "ENABLE_NUCLEO_WBA52CG_EXAMPLES": "ON",
