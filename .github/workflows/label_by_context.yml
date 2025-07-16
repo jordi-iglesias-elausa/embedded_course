@@ -4,6 +4,9 @@ on:
   issues:
     types: [opened, edited]
 
+permissions:
+  issues: write  # Needed to add or create labels    
+
 jobs:
   add-jordi-label:
     runs-on: ubuntu-latest
