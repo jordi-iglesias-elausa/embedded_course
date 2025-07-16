@@ -19,7 +19,7 @@ jobs:
             const issue_number = context.issue.number;
 
             // Match "Context" followed by optional whitespace/newline, then capture the next non-empty line
-            const match = body.match(/### Context\s*\n\s*(\S[^\n]*)/i);
+            const match = body.match(/Issue Context\s*\n\s*(\S[^\n]*)/i);
 
             if (match && match[1]) {
               const label = match[1].trim();
