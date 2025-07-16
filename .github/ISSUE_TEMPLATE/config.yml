@@ -1,3 +1,5 @@
+blank_issues_enabled: false
+
 issue_templates:
   - name: Task
     description: Create a new engineering task with structured fields.
