@@ -8,12 +8,20 @@ body:
         Please fill in the following fields. All fields are mandatory unless marked optional.
 
   - type: input
-    id: sw-hw
+    id: hw
     attributes:
-      label: SW and HW version
+      label: HW version
       placeholder: e.g., SW 1.2.3, HW Rev B
     validations:
       required: true
+
+  - type: input
+    id: sw
+    attributes:
+      label: SW version
+      placeholder: e.g., SW 1.2.3, HW Rev B
+    validations:
+      required: true      
 
   - type: textarea
     id: description
