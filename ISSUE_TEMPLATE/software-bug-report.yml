@@ -1,0 +1,43 @@
+name: Software Bug Report
+description: Report a software issue using a structured format.
+title: "[BUG] <insert concise title>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill in the following fields. All fields are mandatory unless marked optional.
+
+  - type: input
+    id: sw-hw
+    attributes:
+      label: SW and HW version
+      placeholder: e.g., SW 1.2.3, HW Rev B
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How to reproduce the issue
+    validations:
+      required: true
+
+  - type: input
+    id: reporter
+    attributes:
+      label: Who found the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: observers
+    attributes:
+      label: Observers
+      description: Add @names to observe this issue (optional)
