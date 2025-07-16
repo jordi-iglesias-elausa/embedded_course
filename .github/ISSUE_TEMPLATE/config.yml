@@ -1,4 +1,18 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Software Team
+issue_templates:
+  - name: Task
+    description: Create a new engineering task with structured fields.
+    labels: [task]
+    file: task-template.yml
+    type: task
 
+  - name: Software Bug Report
+    description: Report a software issue using a structured format.
+    labels: [bug]
+    file: software-bug-report.yml
+    type: bug
+
+  - name: Feature Request
+    description: Suggest a new feature or improvement.
+    labels: [enhancement]
+    file: feature-request.yml
+    type: feature
