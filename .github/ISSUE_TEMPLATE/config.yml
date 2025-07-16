@@ -1,3 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Software Team
+    url: https://github.com/your-org/your-repo/blob/main/.github/NO_BLANK_ISSUES.md
+    about: Blank issues are disabled. Please use a structured issue template
