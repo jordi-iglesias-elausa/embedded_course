@@ -24,9 +24,9 @@ body:
       required: true  
 
   - type: dropdown
-    id: issue context
+    id: context
     attributes:
-      label: Context
+      label: Issue Context
       description: Where was this bug identified?
       options:
         - SW
