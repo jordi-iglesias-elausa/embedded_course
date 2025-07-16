@@ -21,7 +21,19 @@ body:
       label: SW version
       placeholder: e.g., SW 1.2.3, HW Rev B
     validations:
-      required: true      
+      required: true  
+
+  - type: dropdown
+    id: context
+    attributes:
+      label: Bug Context
+      description: Where was this bug identified?
+      options:
+        - SW
+        - HW
+        - Integration
+        - Documentation
+        - Qualification      
 
   - type: textarea
     id: description
