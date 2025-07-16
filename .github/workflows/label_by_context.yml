@@ -1,38 +1,43 @@
-name: Label Issue Based on Bug Context
+name: Label from Bug Context
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
-  apply-context-label:
+  label-from-context:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Extract context and apply label
+      - name: Extract Bug Context and apply label
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const body = context.payload.issue.body;
+            const body = context.payload.issue.body || "";
+            const match = body.match(/Bug Context\s*\n\n\s*(.*)/i);
+            if (match && match[1]) {
+              const label = match[1].trim();
+              console.log("Label to add:", label);
+              
+              // Check if label exists
+              try {
+                await github.rest.issues.getLabel({
+                  ...context.repo,
+                  name: label
+                });
+              } catch {
+                // Create label if it doesn't exist
+                await github.rest.issues.createLabel({
+                  ...context.repo,
+                  name: label,
+                  color: "ededed",
+                  description: `Auto-created from Bug Context`
+                });
+              }
 
-            // Look for the Bug Context line (assuming it's formatted by the form)
-            const match = body.match(/Bug Context:\s*(.*)/i);
-            if (match) {
-              const contextValue = match[1].trim();
-
-              // Optional: normalize formatting if needed
-              const formatted = contextValue.replace(/\s+/g, "-").toLowerCase();
-              const label = `context/${formatted}`;
-
-              console.log(`Applying label: ${label}`);
-
+              // Add label to issue
               await github.rest.issues.addLabels({
+                ...context.repo,
                 issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: [label],
+                labels: [label]
               });
-            } else {
-              console.log("No Bug Context found in issue body.");
             }
