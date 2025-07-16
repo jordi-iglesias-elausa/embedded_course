@@ -1,0 +1,71 @@
+name: Feature Request
+description: Suggest a new feature or improvement for discussion and planning.
+title: "[FEATURE] <concise feature name>"
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please complete all fields to help the team understand and evaluate your feature request.
+
+  - type: input
+    id: context
+    attributes:
+      label: Related System / Module
+      description: What part of the product is this related to?
+      placeholder: e.g., "Data Sync Engine", "User Dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: Briefly describe the new feature or improvement.
+      placeholder: e.g., "Add offline support to the mobile dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / Problem
+      description: Why is this feature needed? What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How do you propose to implement or approach this feature?
+      placeholder: High-level ideas, APIs, UI changes, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered other solutions or workarounds?
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / Impact
+      description: What other teams, modules, or services might be affected?
+    validations:
+      required: false
+
+  - type: input
+    id: reporter
+    attributes:
+      label: Feature Owner
+      description: Who is proposing or sponsoring this feature?
+      placeholder: e.g., @yourgithubname
+    validations:
+      required: true
