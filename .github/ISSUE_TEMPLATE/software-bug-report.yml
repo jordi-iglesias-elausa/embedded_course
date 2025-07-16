@@ -24,7 +24,7 @@ body:
       required: true  
 
   - type: dropdown
-    id: context
+    id: issue context
     attributes:
       label: Context
       description: Where was this bug identified?
