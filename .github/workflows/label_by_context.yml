@@ -1,0 +1,38 @@
+name: Label Issue Based on Bug Context
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  apply-context-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract context and apply label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = context.payload.issue.body;
+
+            // Look for the Bug Context line (assuming it's formatted by the form)
+            const match = body.match(/Bug Context:\s*(.*)/i);
+            if (match) {
+              const contextValue = match[1].trim();
+
+              // Optional: normalize formatting if needed
+              const formatted = contextValue.replace(/\s+/g, "-").toLowerCase();
+              const label = `context/${formatted}`;
+
+              console.log(`Applying label: ${label}`);
+
+              await github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: [label],
+              });
+            } else {
+              console.log("No Bug Context found in issue body.");
+            }
