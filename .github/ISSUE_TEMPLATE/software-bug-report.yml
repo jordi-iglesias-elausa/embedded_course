@@ -39,8 +39,8 @@ body:
         - 1 (Minor)
         - 2 (Medium)
         - 3 (Major)
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: impact
@@ -58,8 +58,8 @@ body:
         - 1 (Minor)
         - 2 (Medium)
         - 3 (Major)
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: relevance
@@ -77,8 +77,8 @@ body:
         - 1 (Minor)
         - 2 (Medium)
         - 3 (Major)
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: context
