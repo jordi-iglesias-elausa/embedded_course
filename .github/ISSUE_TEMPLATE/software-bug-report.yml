@@ -26,12 +26,14 @@ body:
   - type: dropdown
     id: context
     attributes:
-      label: Issue Context
-      description: Where was this bug identified?
+      label: Technnical Area
+      description: Which technnical area is the responisble of the issue
       options:
         - Software
         - Hardware
         - Mechanic
+    validations:
+      required: true        
 
   - type: textarea
     id: description
