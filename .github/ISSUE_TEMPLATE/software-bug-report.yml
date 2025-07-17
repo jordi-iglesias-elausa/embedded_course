@@ -11,7 +11,7 @@ body:
     id: hw
     attributes:
       label: HW version
-      placeholder: e.g., SW 1.2.3, HW Rev B
+      placeholder: NA in case not apply
     validations:
       required: true
 
@@ -19,7 +19,7 @@ body:
     id: sw
     attributes:
       label: SW version
-      placeholder: e.g., SW 1.2.3, HW Rev B
+      placeholder: NA in case not apply
     validations:
       required: true  
 
@@ -29,11 +29,9 @@ body:
       label: Issue Context
       description: Where was this bug identified?
       options:
-        - SW
-        - HW
-        - Integration
-        - Documentation
-        - Qualification      
+        - Software
+        - Hardware
+        - Mechanic
 
   - type: textarea
     id: description
