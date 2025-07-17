@@ -24,13 +24,13 @@ body:
       required: true  
 
   - type: input
-      id: severity
-      attributes:
-        label: Impact
-        description: How severe is the impact of this issue? (1 = minimal, 5 = critical)
-        placeholder: 1–5
-      validations:
-        required: true
+    id: impact
+    attributes:
+      label: Impact
+      description: How severe is the impact of this issue? (1 = minimal, 5 = critical)
+      placeholder: 1–5
+    validations:
+      required: true
 
   - type: input
     id: frequency
