@@ -1,0 +1,53 @@
+name: Auto-assign Priority Label
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  assign-priority:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Calculate and Assign Priority Label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+
+            // Extract scores from body using RegExp
+            const getScore = (label) => {
+              const match = issueBody.match(new RegExp(`${label}:\\s*(\\d)`, 'i'));
+              return match ? parseInt(match[1]) : 0;
+            };
+
+            const impact = getScore('Impact');
+            const frequency = getScore('Frequency');
+            const reproducibility = getScore('Reproducibility');
+
+            const total = impact + frequency + reproducibility;
+
+            let label = '';
+            if (total <= 5) label = 'priority: low';
+            else if (total <= 10) label = 'priority: medium';
+            else label = 'priority: high';
+
+            console.log(`Calculated total: ${total} → Label: ${label}`);
+
+            // Remove existing priority labels if present
+            const existingLabels = context.payload.issue.labels.map(l => l.name);
+            const updatedLabels = existingLabels.filter(l => !l.startsWith('priority:'));
+
+            updatedLabels.push(label);
+
+            await github.rest.issues.update({
+              ...context.repo,
+              issue_number: context.issue.number,
+              labels: updatedLabels,
+            });
