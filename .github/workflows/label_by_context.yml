@@ -98,3 +98,58 @@ jobs:
               labels: [label],
             });
 
+    format-issue:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Reformat issue as Markdown table
+          uses: actions/github-script@v7
+          with:
+            script: |
+              const issueBody = context.payload.issue.body || "";
+              const issueNumber = context.issue.number;
+  
+              // Helper to extract a section using ### Heading
+              function extractSection(label) {
+                const regex = new RegExp(`###\\s*${label}\\s*\\n([^#]*)`, 'i');
+                const match = issueBody.match(regex);
+                return match ? match[1].trim() : "_Not provided_";
+              }
+  
+              const hw = extractSection("HW version");
+              const sw = extractSection("SW version");
+              const severity = extractSection("Severity");
+              const impact = extractSection("Impact");
+              const relevance = extractSection("Relevance");
+              const contextArea = extractSection("Technnical Area");
+              const description = extractSection("Issue Description");
+              const reproduction = extractSection("How to reproduce the issue");
+              const reporter = extractSection("Who found the issue");
+              const observers = extractSection("Observers");
+  
+              const table = `
+  ## 🧾 Issue Summary (Auto-formatted)
+  
+  | Field              | Value                    |
+  |--------------------|---------------------------|
+  | **HW version**     | ${hw}                    |
+  | **SW version**     | ${sw}                    |
+  | **Severity**       | ${severity}              |
+  | **Impact**         | ${impact}                |
+  | **Relevance**      | ${relevance}             |
+  | **Technical Area** | ${contextArea}           |
+  | **Reported by**    | ${reporter}              |
+  | **Observers**      | ${observers}             |
+  
+  ### 🐞 Issue Description
+  ${description}
+  
+  ### 🔁 How to Reproduce
+  ${reproduction}
+  `;
+  
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issueNumber,
+                body: table
+              });            
+
