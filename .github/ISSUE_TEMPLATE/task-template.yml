@@ -1,6 +1,5 @@
 name: Task
 description: Create a new engineering task with detailed information and checklists.
-title: "[TASK] <brief task title>"
 labels: [task]
 assignees: []
 
@@ -10,15 +9,6 @@ body:
       value: |
         Please complete all applicable sections to clearly define this task.
 
-  - type: input
-    id: context
-    attributes:
-      label: Context or Feature
-      description: What project, component, or feature is this task related to?
-      placeholder: e.g., "Authentication module" or "Firmware update feature"
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
@@ -27,27 +17,3 @@ body:
       placeholder: Clearly define the goal, requirements, or deliverables.
     validations:
       required: true
-
-  - type: checkboxes
-    id: subtasks
-    attributes:
-      label: Subtasks (if any)
-      description: List any steps or subtasks involved.
-      options:
-        - label: Research requirements
-        - label: Implement logic
-        - label: Write tests
-        - label: Review with team
-        - label: Update documentation
-
-  - type: input
-    id: due-date
-    attributes:
-      label: Due Date
-      placeholder: e.g., 2025-07-25 (optional)
-
-  - type: input
-    id: assignee
-    attributes:
-      label: Responsible person
-      placeholder: GitHub username (optional)
