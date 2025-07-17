@@ -36,9 +36,9 @@ body:
         
         Consider: Does it block progress? Affect safety or compliance? Is it reversible?
     options:
-      - 1 (Minor)
-      - 2 (Medium)
-      - 3 (Major)
+      1 (Minor)
+      2 (Medium)
+      3 (Major)
     validations:
       required: true
 
