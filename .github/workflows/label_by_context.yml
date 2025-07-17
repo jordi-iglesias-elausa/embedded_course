@@ -127,25 +127,25 @@ jobs:
             const observers = extractSection("Observers");
 
             const table = `
-## 🧾 Issue Summary (Auto-formatted)
-
-| Field              | Value                    |
-|--------------------|---------------------------|
-| **HW version**     | ${hw}                    |
-| **SW version**     | ${sw}                    |
-| **Severity**       | ${severity}              |
-| **Impact**         | ${impact}                |
-| **Relevance**      | ${relevance}             |
-| **Technical Area** | ${contextArea}           |
-| **Reported by**    | ${reporter}              |
-| **Observers**      | ${observers}             |
-
-### 🐞 Issue Description
-${description}
-
-### 🔁 How to Reproduce
-${reproduction}
-`;
+              ## 🧾 Issue Summary (Auto-formatted)
+              
+              | Field              | Value                    |
+              |--------------------|---------------------------|
+              | **HW version**     | ${hw}                    |
+              | **SW version**     | ${sw}                    |
+              | **Severity**       | ${severity}              |
+              | **Impact**         | ${impact}                |
+              | **Relevance**      | ${relevance}             |
+              | **Technical Area** | ${contextArea}           |
+              | **Reported by**    | ${reporter}              |
+              | **Observers**      | ${observers}             |
+              
+              ### 🐞 Issue Description
+              ${description}
+              
+              ### 🔁 How to Reproduce
+              ${reproduction}
+              `;
 
             await github.rest.issues.createComment({
               ...context.repo,
