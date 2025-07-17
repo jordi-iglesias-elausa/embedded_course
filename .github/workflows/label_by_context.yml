@@ -127,7 +127,7 @@ jobs:
             const observers = extractSection("Observers");
 
             const table = `
-              ## 🧾 Issue Summary (Auto-formatted)
+              ## 🧾 Issue Summary
               
               | Field              | Value                    |
               |--------------------|---------------------------|
