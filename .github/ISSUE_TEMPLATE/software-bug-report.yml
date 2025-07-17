@@ -35,12 +35,12 @@ body:
         - **1 – Minor**: Cosmetic or low impact (e.g. small visual bug)
         
         Consider: Does it block progress? Affect safety or compliance? Is it reversible?
-    options:
-      - 1 (Minor)
-      - 2 (Medium)
-      - 3 (Major)
-    validations:
-      required: true
+      options:
+        - 1 (Minor)
+        - 2 (Medium)
+        - 3 (Major)
+      validations:
+        required: true
 
   - type: dropdown
     id: impact
@@ -54,12 +54,12 @@ body:
         - **1 – Minor**: Local or temporary impact (e.g. minor delay, no strategic effect)
   
         Consider: Does it affect system-wide goals, cause delays, or require contract changes?
-    options:
-      - 1 (Minor)
-      - 2 (Medium)
-      - 3 (Major)
-    validations:
-      required: true
+      options:
+        - 1 (Minor)
+        - 2 (Medium)
+        - 3 (Major)
+      validations:
+        required: true
 
   - type: dropdown
     id: relevance
@@ -73,12 +73,12 @@ body:
         - **1 – Minor**: Can be deferred without business or client impact
   
         Ask: Does it block work today? Is it critical for the client? Is there reputational or legal risk?
-    options:
-      - 1 (Minor)
-      - 2 (Medium)
-      - 3 (Major)
-    validations:
-      required: true
+      options:
+        - 1 (Minor)
+        - 2 (Medium)
+        - 3 (Major)
+      validations:
+        required: true
 
   - type: dropdown
     id: context
