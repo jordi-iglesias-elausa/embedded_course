@@ -22,33 +22,6 @@ body:
       placeholder: NA in case not apply
     validations:
       required: true  
-  
-  - type: input
-      id: impact
-      attributes:
-        label: Impact
-        description: How severe is the impact of this issue? (1 = minimal, 5 = critical)
-        placeholder: 1–5
-      validations:
-        required: true
-
-  - type: input
-    id: frequency
-    attributes:
-      label: Frequency
-      description: How often does this issue occur? (1 = rare, 5 = always)
-      placeholder: 1–5
-    validations:
-      required: true
-
-  - type: input
-    id: reproducibility
-    attributes:
-      label: Reproducibility
-      description: How easily can this issue be reproduced? (1 = very hard, 5 = always reproducible)
-      placeholder: 1–5
-    validations:
-      required: true      
 
   - type: dropdown
     id: context
