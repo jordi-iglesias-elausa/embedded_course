@@ -49,10 +49,11 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     id: reporter
     attributes:
       label: Who found the issue
+      description: Tag (@) the person who reported the issue.
     validations:
       required: true
 
@@ -60,4 +61,4 @@ body:
     id: observers
     attributes:
       label: Observers
-      description: Add @names to observe this issue (optional)
+      description: Optionally, tag (@) individuals who should be informed or observe this issue.
