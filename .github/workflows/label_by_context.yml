@@ -74,14 +74,14 @@ jobs:
             }
             
             const impact = extractValue('Impact');
-            const frequency = extractValue('Frequency');
-            const reproducibility = extractValue('Reproducibility');
+            const severity = extractValue('Severity');
+            const relevance = extractValue('Relevance');
             
-            const total = impact + frequency + reproducibility;
+            const total = (severity) + (impact) + (relevance * 2);
             
             let label = '';
-            if (total <= 5) label = 'priority: low';
-            else if (total <= 10) label = 'priority: medium';
+            if (total <= 6) label = 'priority: low';
+            else if (total <= 9) label = 'priority: medium';
             else label = 'priority: high';
             
             console.log(`Calculated total: ${total} → Label: ${label}`);
