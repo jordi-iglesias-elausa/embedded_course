@@ -92,8 +92,9 @@ jobs:
             
             updatedLabels.push(label);
             
-            await github.rest.issues.update({
+            await github.rest.issues.addLabels({
               ...context.repo,
               issue_number: context.issue.number,
-              labels: updatedLabels,
+              labels: [label],
             });
+
