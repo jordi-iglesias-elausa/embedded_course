@@ -1,6 +1,7 @@
 name: Software Bug Report
 description: Report a software issue using a structured format.
-title: "[BUG] <insert concise title>"
+attributes:
+  placeholder: insert concise title
 body:
   - type: markdown
     attributes:
