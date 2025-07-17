@@ -49,3 +49,51 @@ jobs:
             } else {
               console.log("No 'Context' section found — skipping label.");
             }
+
+  assign-priority:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Calculate and Assign Priority Label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+            
+            // Use flexible RegExp to match heading + number lines
+            function extractValue(id) {
+              const regex = new RegExp(`###\\s*${id}\\s*\\n(\\d)`, 'i');
+              const match = issueBody.match(regex);
+              return match ? parseInt(match[1]) : 0;
+            }
+            
+            const impact = extractValue('Impact');
+            const frequency = extractValue('Frequency');
+            const reproducibility = extractValue('Reproducibility');
+            
+            const total = impact + frequency + reproducibility;
+            
+            let label = '';
+            if (total <= 5) label = 'priority: low';
+            else if (total <= 10) label = 'priority: medium';
+            else label = 'priority: high';
+            
+            console.log(`Calculated total: ${total} → Label: ${label}`);
+            
+            // Remove existing priority labels if present
+            const existingLabels = context.payload.issue.labels.map(l => l.name);
+            const updatedLabels = existingLabels.filter(l => !l.startsWith('priority:'));
+            
+            updatedLabels.push(label);
+            
+            await github.rest.issues.update({
+              ...context.repo,
+              issue_number: context.issue.number,
+              labels: updatedLabels,
+            });
