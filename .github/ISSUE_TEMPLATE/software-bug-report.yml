@@ -22,7 +22,7 @@ body:
       placeholder: Specify the SW version
     validations:
       required: true  
-
+      
   - type: dropdown
     id: severity
     attributes:
@@ -30,15 +30,15 @@ body:
       description: |
         Quantifies how much the issue affects the system or project:
         
-        **3 – Major**: Critical failure or blocker (e.g. backend crash, data loss)
-        **2 – Medium**: Significant, but not blocking (e.g. feature degraded)
-        **1 – Minor**: Cosmetic or low impact (e.g. small visual bug)
+        - **3 – Major**: Critical failure or blocker (e.g. backend crash, data loss)
+        - **2 – Medium**: Significant, but not blocking (e.g. feature degraded)
+        - **1 – Minor**: Cosmetic or low impact (e.g. small visual bug)
         
         Consider: Does it block progress? Affect safety or compliance? Is it reversible?
     options:
-      1 (Minor)
-      2 (Medium)
-      3 (Major)
+      - 1 (Minor)
+      - 2 (Medium)
+      - 3 (Major)
     validations:
       required: true
 
