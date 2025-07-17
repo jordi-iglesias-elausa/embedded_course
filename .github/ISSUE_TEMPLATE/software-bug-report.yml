@@ -23,33 +23,42 @@ body:
     validations:
       required: true  
 
-  - type: input
+  - type: dropdown
     id: impact
     attributes:
       label: Impact
-      description: How severe is the impact of this issue? (1 = minimal, 5 = critical)
-      placeholder: 1–5
+      description: How severe is the impact of this issue?
+      options:
+        - 1 (Low)
+        - 2 (Moderate)
+        - 3 (High)
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: frequency
     attributes:
       label: Frequency
-      description: How often does this issue occur? (1 = rare, 5 = always)
-      placeholder: 1–5
+      description: How often does this issue occur?
+      options:
+        - 1 (Rare)
+        - 2 (Intermittent)
+        - 3 (Frequent)
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: reproducibility
     attributes:
       label: Reproducibility
-      description: How easily can this issue be reproduced? (1 = very hard, 5 = always reproducible)
-      placeholder: 1–5
+      description: How easily can this issue be reproduced?
+      options:
+        - 1 (Hard to reproduce)
+        - 2 (Sometimes reproducible)
+        - 3 (Always reproducible)
     validations:
-      required: true            
-
+      required: true
+      
   - type: dropdown
     id: context
     attributes:
