@@ -1,5 +1,6 @@
 name: Software Bug Report
 description: Report a software issue using a structured format.
+labels: [bug]
 
 body:
   - type: markdown
