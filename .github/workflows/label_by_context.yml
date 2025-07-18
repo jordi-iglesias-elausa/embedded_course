@@ -99,7 +99,7 @@ jobs:
             });
 
   format-issue:
-    if: contains(github.event.issue.labels.*.name, 'issue')
+    if: contains(github.event.issue.labels.*.name, 'bug')
     runs-on: ubuntu-latest
     steps:
       - name: Reformat issue as Markdown table
